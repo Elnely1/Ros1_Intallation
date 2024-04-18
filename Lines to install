@@ -1,0 +1,11 @@
+sudo sh -c 'echo "deb http://packages.ros.org/ros/ubuntu $(lsb_release -sc) main" > /etc/apt/sources.list.d/ros-latest.list'         #this is the first line
+sudo apt install curl                                                                                                                #the second line to install curl if you haven't already install it 
+curl -s https://raw.githubusercontent.com/ros/rosdistro/master/ros.asc | sudo apt-key add -                                          # the third line
+sudo apt update                                                                                                                      # to tell the Ubuntu that you will add some things
+sudo apt install ros-noetic-desktop-full                                                                                             # to install the ros with the all pkgs
+apt search ros-noetic                                                                                                                # to list the packages installed on your ubuntu
+source /opt/ros/noetic/setup.bash                                                                                                    #to  setup the ros environmental
+
+
+#! after this if you need to install package fron ros write this line:
+sudo apt install ros-noetic-(Package Name)
